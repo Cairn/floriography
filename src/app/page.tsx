@@ -52,7 +52,7 @@ export default function FlowerPage() {
   return (
     <div className="min-h-screen bg-[#faf8f5] flex flex-col">
       {/* Main content */}
-      <main className="flex-1 flex items-center justify-center px-4 py-8 sm:py-12">
+      <main className="flex-1 flex items-center justify-center px-4 py-8 pb-24 sm:py-12 sm:pb-24">
         <div
           className={`w-full max-w-lg transition-all duration-500 ease-out ${
             fading ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
@@ -141,26 +141,27 @@ export default function FlowerPage() {
             </div>
           </div>
 
-          {/* Button */}
-          <div className="flex justify-center">
-            <button
-              onClick={showNewFlower}
-              className="group flex items-center gap-2.5 px-6 py-3 rounded-full bg-stone-900 text-white text-sm font-medium hover:bg-stone-800 active:scale-[0.98] transition-all shadow-md shadow-stone-900/15 cursor-pointer"
-            >
-              <span className="inline-block transition-transform group-hover:rotate-12">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2a10 10 0 1 0 10 10" />
-                  <path d="M12 2v10l6.5 6.5" />
-                </svg>
-              </span>
-              Another Flower
-            </button>
-          </div>
         </div>
       </main>
 
+      {/* Fixed refresh button */}
+      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-10">
+        <button
+          onClick={showNewFlower}
+          className="group flex items-center gap-2.5 px-6 py-3 rounded-full bg-stone-900/90 text-white text-sm font-medium hover:bg-stone-800 active:scale-[0.98] transition-all shadow-lg shadow-stone-900/20 backdrop-blur-sm cursor-pointer"
+        >
+          <span className="inline-block transition-transform group-hover:rotate-12">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 2a10 10 0 1 0 10 10" />
+              <path d="M12 2v10l6.5 6.5" />
+            </svg>
+          </span>
+          Another Flower
+        </button>
+      </div>
+
       {/* Footer */}
-      <footer className="text-center py-6 text-[11px] text-stone-400 tracking-wide">
+      <footer className="text-center py-6 pb-16 text-[11px] text-stone-400 tracking-wide">
         Flowers &amp; Poetry — {flowers.length} blooms in the collection
       </footer>
     </div>
