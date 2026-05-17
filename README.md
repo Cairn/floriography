@@ -49,6 +49,3 @@ Open [localhost:3000](http://localhost:3000). Each refresh gives you a new flowe
 | Violet | Christina Rossetti | (1893) |
 | Honeysuckle | James Whitcomb Riley | (1883) |
 
-## License
-
-MIT
